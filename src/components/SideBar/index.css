@@ -1,0 +1,142 @@
+.NavBar{
+    position: fixed;
+    right: 0;
+    height: 100svh;
+    width: 12rem;
+    /* background-color: var(--primary-bg-color); */
+    font-family: 'helvetica';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+.NavBar nav{
+    height: 40svh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.NavBtns{
+         width: 132px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: all 0.4s ease-in-out;
+        border-radius: 3rem;
+}
+
+.NavBtnIcon{
+        height: 55px;  
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 55px;
+        background-color: var(--primary-box-color);
+        border-radius: 50%;
+        position: absolute;
+        transition: all 0.2s ease-in-out;
+        right: 0;
+}
+.NavBtnIcon .FaNavIcon{
+        font-size: 1.1rem;
+        color: var(--primary-text-color);
+}
+.NavBtnText{
+        height: 55px;
+        width: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.1rem;
+        border-radius: 3rem;
+        margin-right: 5px;
+        opacity: 0;
+        transition: all 0.24s ease-in-out;
+        background-color: var(--primary-color);
+        position: absolute;
+        right: 0;
+}
+.NavBtnText h4{
+    color:var(--primary-text-color) ;
+    letter-spacing: 1.5px;
+    margin-right: 26px;  
+}
+.NavBtns:hover .NavBtnIcon{
+    background-color: var(--primary-color);
+}
+.NavBtns:hover .NavBtnText{
+    opacity: 1;
+   width: 154px;
+}
+
+.activeBtnNav{
+    background-color: var(--primary-color);
+}
+.NavBtns.active .FaNavIcon{
+    background-color: var(--primary-color);
+
+}
+.NavBtns.active .NavBtnIcon{
+    background-color: var(--primary-color);
+
+}
+
+@media only screen and (max-width : 900px){
+    .NavBar{
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        height: 10svh;
+        background-color: var(--primary-boxbg-color);
+        
+    }
+    
+    .NavBar nav{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: row;
+    }
+    .NavBtnText{
+        display: none;
+    }
+    .NavBtnIcon{
+        border-radius: 50%;
+        right: initial;
+    }
+    .NavBtnIcon .FaNavIcon{
+            color: var(--primary-text-color);
+            font-size: 1.24rem;
+            padding: 1rem;
+            border-radius: 50%;
+            background-color: var(--primary-box-color);
+            transition: all 0.3s ease-in-out;
+    }
+    .FaNavIcon:hover{
+        background-color: var(--primary-color);
+    
+    }
+    .NavBtns.active .FaNavIcon{
+        background-color: var(--primary-color);
+    
+    }
+    .NavBtns.active .NavBtnIcon{
+        background-color: var(--primary-color);
+    
+    }
+}
+
+@media only screen and (max-width: 420px){
+    .NavBtnIcon .FaNavIcon{
+            padding: 0.9rem;
+            font-size: 1.1rem;
+
+    }
+}

@@ -1,0 +1,147 @@
+:root{
+  --primary-color:#ffb400;
+  --primary-bg-color: #111111;
+  --primary-box-color: #373737;
+  --primary-boxbg-color: #2b2a2a;
+  --primary-text-color : #eeeeee;
+  --heading-back: hsla(0,0%,100%,.07);
+}
+*{
+  margin: 0;padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color: var(--primary-box-color);
+}
+::selection{
+  background-color: #ffb400;
+  color: #eeeeee;
+}
+.AllButton{
+  height: 55px;
+  width: 250px;
+  border-radius: 2rem;
+  color: var(--primary-text-color);
+  border: 1.5px solid var(--primary-color);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.submitBtn{
+  height: 55px;
+  width: 250px;
+  border-radius: 2rem;
+  color: var(--primary-text-color);
+  border: 1.5px solid var(--primary-color);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-top: 1rem;
+  /* transform: translateX(10rem); */
+}
+.downloadBtn{
+  height: 100%;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: var(--primary-text-color);
+}
+.btnText{
+  margin-left: -2rem;
+  font-family: poppins;
+  text-transform: uppercase;
+  font-size: 1.06rem;
+  font-weight: 600;
+  z-index: 1;
+}
+.IconBox{
+  position: absolute;
+  right: 0;
+  height: 55px;
+  width: 55px;
+  border-radius: 2rem;
+  background-color: var(--primary-color);
+  transition: all 0.3s ease-in-out;
+}
+.AllButton:hover .IconBox{
+  border-radius: 2rem;
+  width: 250px;
+}
+.submitBtn:hover .IconBox{
+  border-radius: 2rem;
+  width: 250px;
+}
+.BtnIcon{
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.4rem;
+}
+
+@keyframes Toastify__bounceInDown {
+  0%,60%,75%,90%,to {
+      animation-timing-function: cubic-bezier(.215,.61,.355,1)
+  }
+
+  0% {
+      opacity: 0;
+      transform: translate3d(0,-3000px,0)
+  }
+
+
+  60% {
+      opacity: 1;
+      transform: translate3d(0,25px,0)
+  }
+
+  75% {
+      transform: translate3d(0,-10px,0)
+  }
+
+  90% {
+      transform: translate3d(0,5px,0)
+  }
+
+  to {
+      transform: none
+  }
+}
+
+@keyframes Toastify__slideInUp {
+  0% {
+      transform: translate3d(0,110%,0);
+      visibility: visible
+  }
+
+  to {
+      transform: translateZ(0)
+  }
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--primary-boxbg-color);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--primary-box-color);
+  border-radius: 1rem;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

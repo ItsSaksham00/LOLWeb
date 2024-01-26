@@ -1,0 +1,55 @@
+.confirmBoxContainer{
+    height: 110svh;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    z-index: 99999;
+    background-color: rgba(0, 0, 0, 0.523);
+    backdrop-filter: blur(4.5px);
+}
+
+.confirmBox{
+    position: absolute;
+    bottom: 0;
+    height: fit-content;
+    width: 100%;
+    background-color: var(--primary-bg-color);
+    animation: heartBeat 1s linear forwards;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    box-shadow: 1px 20px 20px 20px var(--primary-bg-color);
+    padding: 1.3rem;;
+}
+.confirmBox p{
+    padding: 1rem;
+    font-family: poppins;
+    font-size: 1.1rem;
+    color: var(--primary-text-color);
+}
+.confirmBtn{
+    padding: .8rem 1.4rem;
+    border-radius: 12px;
+    margin-left: .6rem;
+    background-color: var(--primary-color);
+    cursor: pointer;
+    color: var(--primary-text-color);
+    font-family: poppins;
+    font-size: 1.06rem;
+    border: none;
+}
+@media only screen and (max-width: 510px){
+.confirmBox{
+    padding: 0.4rem;   
+}
+    .confirmBox p{
+        font-size: 0.85rem;
+    }
+.confirmBtn{
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    padding: .6rem 1rem;
+
+}
+}

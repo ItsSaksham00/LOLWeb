@@ -1,0 +1,303 @@
+.AboutContainer{
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary-bg-color);
+    overflow-x: hidden;
+    animation: bounceInDown 1s linear forwards;
+    border-radius: .5rem;
+    position: relative;
+    /* display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; */
+
+}
+.aboutContainerBox{
+    height: 100%;
+    width: 100%;
+    position: relative;
+/* animation-delay: 0.4s;
+    animation: fadeInUp 1s linear forwards; */
+}
+.MyImage{
+    height: 232px;
+    width: 232px;
+    display: none;
+    border: 5px solid var(--primary-box-color);
+    border-radius: 50%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.AboutinfoBox{
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    color: var(--primary-text-color);
+}
+.pointInfo{
+    width: 42rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    /* background-color: red; */
+    padding: 1rem;
+}
+.infoTopic{
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-bottom: 1.4rem;
+}
+.pointInfo ul{
+    list-style: none;
+    display: flex;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+}
+.pointInfo ul li{
+    display: flex;
+    /* padding: 1rem; */
+    flex: 0 0 19rem;
+}
+.pointInfo ul li:not(:last-child){
+   padding-bottom: 20px;
+}
+.infoPoint{
+    font-family: 'helvetica';
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+.detailPoint{
+    margin-left: 4px;
+    font-family: 'helvetica';
+    font-size: 1.1rem;
+}
+
+.parainfo{
+    width: calc(100% - 42rem);
+    margin-left: -1.5rem;
+}
+.writtenInfo{
+    width: 90%;
+}
+.writtenInfo p{
+    padding: 1rem;
+    font-family: poppins;
+    font-size: 0.9rem;
+}
+.boxInfo{
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center; gap: 2rem;
+}
+.infoBox{
+    height: 120px;
+    width: 190px;
+    border: 1px solid var(--heading-back);
+    border-radius: 0.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    position: relative;
+    font-family: 'helvetica';
+    margin-top: 1rem;
+    box-shadow: 0 0 10px rgba(0,0,0,.9);
+    margin-bottom: 2rem;
+}
+.infoBox h1{
+    position: absolute;
+    padding: 0.7rem 1.3rem;
+    font-size: 2.4rem;
+    top: 0;
+    left: 1rem;
+    color: var(--primary-color);
+}
+.infoBox h1::after{
+    content: '+';
+    position: absolute;
+    top: -3px;
+
+}
+.infoBox h2{
+    position: absolute;
+    padding: 0.7rem 1.3rem;
+    font-size: 1.3rem;
+    top: 2.8rem;
+    left: 2rem;
+}
+.infoBox h2::before{
+    content: '';
+    position: absolute;
+    height: 5px;
+    width: 30px;
+    left: -1rem;
+    top: 1.5rem;
+    border-radius: 1rem;
+    background-color: var(--primary-color);
+}
+.AboutSkills{
+    width: 100%;
+    height:70svh;
+    position: relative;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 3rem;
+
+}
+.SkillsHead{
+
+    font-size: 3rem;
+    font-family: 'helvetica';
+    text-transform: uppercase;
+    color: var(--primary-color);
+}
+.SkillsPara{
+    margin-top: 1rem;
+    text-align: center;
+    width: 40%;
+    color: var(--primary-text-color);
+    font-family: poppins;
+    font-size: 0.9rem;
+}
+.stage-cube-cont{
+    width: 140%;
+    height: 100%;
+    margin-left: 0;
+    position: absolute;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 50%;
+    left: 45%;
+    transform: translate(-50%,-50%);
+
+}
+
+.cubespinner{
+    animation-name: spincube;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 12s;
+    transform-style: preserve-3d;
+    transform-origin: 100px 100px 0;
+    /* margin-left: calc(50% - 100px); */
+}
+    .cubediv {
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        background: rgba(255, 255, 255, 0.4);
+        text-align: center;
+        font-size: 100px;   
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .face1 {
+        transform: translateZ(100px);
+        box-shadow: 0 0 20px 0px lightyellow;
+        border: 1px solid #ccc;
+        color: #dd0031;
+      }
+      .face2 {
+        transform: rotateY(90deg) translateZ(100px);
+        box-shadow: 0 0 20px 0px lightyellow;
+        border: 1px solid #ccc;
+        color: #f06529;
+      }
+      .face3 {
+        transform: rotateY(90deg) rotateX(90deg) translateZ(100px);
+        box-shadow: 0 0 20px 0px lightyellow;
+        border: 1px solid #ccc;
+        color: #28a4d9;
+      }
+      .face4 {
+        transform: rotateY(180deg) rotateZ(90deg) translateZ(100px);
+        box-shadow: 0 0 20px 0px lightyellow;
+        border: 1px solid #ccc;
+        color: #5ed4f4;
+      }
+      .face5 {
+        transform: rotateY(-90deg) rotateZ(90deg) translateZ(100px);
+        border: 1px solid #ccc;
+        color: #efd81d;
+        box-shadow: 0 0 20px 0px lightyellow;
+      }
+      .face6 {
+        transform: rotateX(-90deg) translateZ(100px);
+        box-shadow: 0 0 20px 0px lightyellow;
+        border: 1px solid #ccc;
+        color: #ec4d28;
+      }
+
+
+@keyframes spincube {
+    from,
+    to {
+      transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    }
+    16% {
+      transform: rotateY(-90deg) rotateZ(90deg);
+    }
+    33% {
+      transform: rotateY(-90deg) rotateX(90deg);
+    }
+    50% {
+      transform: rotateY(-180deg) rotateZ(90deg);
+    }
+    66% {
+      transform: rotateY(-270deg) rotateX(90deg);
+    }
+    83% {
+      transform: rotateX(90deg);
+    }
+  }
+  
+@media only screen and (max-width: 948px){
+.parainfo{
+    margin-top: 1rem;
+    width: 100%;
+    margin-left: 2rem;
+    margin-bottom: 20%;
+}
+.writtenInfo{
+    width: 96%;
+}
+.writtenInfo p{
+    padding: 0.1rem;;
+}
+.stage-cube-cont{
+    top: 50%;
+    left: 45%;
+    transform: translate(-62%,-50%);
+   
+   }
+   .SkillsPara{
+    width: 92%;
+   }
+   .MyImage{
+    display: block;
+   }
+}
+@media only screen and (max-width: 532px) {
+        .cubediv{
+            height: 170px;
+            width: 170px;
+            border-radius: 10px;
+        }
+.writtenInfo p{
+    font-size: 0.83rem;
+}
+.SkillsPara{
+    font-size: 0.83rem;   
+}
+}

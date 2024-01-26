@@ -1,0 +1,239 @@
+.MainContainer{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    background-color: var(--primary-bg-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    z-index: 1;
+    animation: bounceInDown 1s linear forwards;
+}
+
+.ColorStrip{
+    height: 200svh;
+    width: 40rem;
+    background-color: var(--primary-color);
+    position: absolute;
+    left: -25%;
+    z-index: -1;
+    rotate: -20deg;
+}
+
+.imageContainer{
+    position: relative;
+    height: 90%;
+    width: 34%;
+    z-index: 1;
+    margin-left: 2rem;
+}
+.imageContainer img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 1.5rem;
+    box-shadow: 0 0 7px rgba(0,0,0,.9);
+}
+.InfoBox{
+    width: calc(100% - 530px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: -4rem;
+
+}
+.InfoNameBox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+}
+.InfoNameBox h1{
+    color: var(--primary-color);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2.9rem;
+    line-height: 62px;
+    font-weight: 700;
+    position: relative;
+    padding-left: 70px;
+}
+.H1::before{
+    content: '';
+    height: 5px;
+    width: 36px;
+    background-color: var(--primary-color);
+    position: absolute;
+    border-radius: 6px;
+    top: 50%;
+    left: 0;
+}
+.InfoNameBox h2{    
+    display: flex;
+        text-align: center;
+        font-family: 'helvetica';
+        font-size: 2rem;
+        color: var(--primary-text-color);
+        font-weight: 600;
+}
+.InfoNameBox h2 .H2span{
+    opacity: 0;
+}
+.InfoDetailBox{
+    /* background-color: red; */
+    width: 65%;
+    margin: 14px 0 28px;
+    text-align: center;
+}
+.InfoDetailBox p{
+    color: var(--primary-text-color);
+    padding: 1rem;
+    font-size: 1rem;
+    line-height: 30px;
+    font-family: poppins;
+}
+
+@media only screen and (max-width: 1350px){
+
+    .InfoNameBox h1{
+        font-size: 2.6rem;
+    }
+    .InfoBox{
+        margin-left: -3rem;
+    }
+.InfoNameBox h2{    
+    font-size: 1.8rem;
+}
+.ColorStrip{
+    left: -30%;
+}
+}
+
+@media only screen and (max-width: 1160px){
+.H1::before{
+    display: none;
+}
+.imageContainer{
+    margin-left: -2rem;   
+}
+.InfoNameBox h1{
+    font-size: 2.4rem;
+}
+.InfoNameBox h2{    
+    font-size: 1.6rem;
+}
+.InfoBox{
+    margin-left: -7rem;
+}
+.InfoDetailBox {
+    width: 70%;
+}
+.ColorStrip{
+    left: -43%;
+}
+}
+
+@media only screen and (max-width: 900px) {
+        .ColorStrip{
+            display: none;
+        }
+.MainContainer{
+    flex-direction: column;   
+    height: 110svh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-y: visible;
+}
+.imageContainer{
+    margin-top: -20%;
+    height: 232px;
+    width: 232px;
+}
+.imageContainer img{
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    border: 5px solid var(--primary-box-color);
+}
+.InfoBox{
+    margin-top: 0.8rem;
+    width: 100%;
+    margin-left: 0;
+}
+.InfoNameBox{
+    width: 100%;
+}
+.InfoNameBox h1{
+    padding-left: 0;
+}
+.InfoDetailBox{
+    width: 95%;
+    margin: 1rem
+}
+    .InfoDetailBox p{
+        padding: 1rem;
+        font-size: 0.9rem;
+    }
+
+}
+
+@media only screen and (max-width: 528px) {
+.InfoNameBox h1{
+    text-align: center;
+    font-size: 1.9rem;
+}
+.H1{
+    margin-top: -1rem;
+}
+.InfoNameBox h2{    
+    text-align: center;
+    font-size: 1.34rem;
+}
+.InfoDetailBox p{
+    text-align: center;
+    font-size: 0.8rem;
+}
+}
+
+
+.ClickAboutBox{
+    height: 100svh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background-color: #0000006f;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.aboutBoxDisplay{
+    border-radius: 0.4rem;
+    height: 550px;
+    width: 1100px;
+    position: relative;
+    z-index: 99999;
+}
+.CloseMe{
+    cursor: pointer;
+    top: .5rem;
+    font-size: 3rem;
+    right: 1rem;
+    position: absolute;
+    color: var(--primary-text-color);
+    opacity: 0;
+    animation: fadeIn 1s linear forwards;
+    animation-delay: 1s;
+}
+
+@media only screen and (max-width: 990px){
+.aboutBoxDisplay{
+    width: 94%;    
+    height: 660px;
+
+
+}
+}
